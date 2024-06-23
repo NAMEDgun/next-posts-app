@@ -6,18 +6,23 @@
   "author": "jeffchoi72 <ihello0720@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "next": "set NODE_OPTIONS=--openssl-legacy-provider && next",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && next dev",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && next build",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && next start"
   },
   "dependencies": {
+    "isomorphic-unfetch": "^4.0.2",
     "next": "^9.1.4",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@types/node": "^12.12.14",
     "@types/react": "^16.9.13",
+    "@types/styled-components": "^5.1.34",
+    "babel-plugin-styled-components": "^2.1.4",
     "typescript": "^3.7.2"
   }
 }
